@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HermanoComponent } from './hermano/hermano.component';
 import { EstiloHermanoDirective } from './estilo-hermano.directive';
+import { MiPipePersonalizadoPipe } from './mi-pipe-personalizado.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PadreComponent,
     HermanoComponent,
-    EstiloHermanoDirective
+    EstiloHermanoDirective,
+    MiPipePersonalizadoPipe
   ],
   imports: [
     BrowserModule,

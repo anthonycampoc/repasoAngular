@@ -1,4 +1,13 @@
 <p appEstiloHermano>{{nombre}}</p>
 
+<p>valor en porcentaje {{asistencia | percent}}</p>
+<P>{{nombre2 | miPipePersonalizado}}  </P>
+
+<p>Valor a pagar {{valorTotal | currency: 'EUR'}}</p>
+
+<p>VALOR FINAL {{pi | number: '1.2-2' }}</p>
+
+<p> fecha limite para ingresar la documentacion {{fecha | date: 'dd/M/yyyy'}}</p>
+
 <button (click)="saludar() ">SALUDAR HERMANO PEQUENO</button>
 <button (click)="preguntar() ">preguntar por hijo</button>

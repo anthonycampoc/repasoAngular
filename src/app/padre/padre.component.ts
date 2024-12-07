@@ -10,6 +10,16 @@ export class PadreComponent implements OnInit{
   
   nombre?: string;
 
+  //pipe
+  nombre2 : string = "jose perea";
+
+  fecha? : Date = new Date();
+
+  pi? : number = 3.14159265359;
+
+  valorTotal? : number = 0.5989;
+ 
+  asistencia? : number = 0.99;
   
   // _ el guin bajo hace referencia a la inserccion de dependencias 
   constructor( private _servicioFamiliar : ServicioFamiliarService){}
