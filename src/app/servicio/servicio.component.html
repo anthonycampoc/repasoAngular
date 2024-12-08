@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let servicio of servicioList">
+        <th scope="row">{{servicio.id}}</th>
+        <td>{{servicio.name |uppercase}}</td>
+        <td [ngClass]="{'red-color': servicio.price < 60}">{{servicio.price | currency}}</td>
+        <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/servicio', servicio.id]" >Primary</button></td>
+      </tr>
+
+   
+    </tbody>
+  </table>

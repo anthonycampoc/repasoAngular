@@ -1,0 +1,11 @@
+<ng-container *ngIf="!loading">
+    <p >DETALLE DEL SERVICIO DE: <strong>{{servicio?.name | uppercase}}</strong> </p>
+    <span [ngStyle]="{'color' : color}" > precio del servicio es: <strong>{{servicio?.price | currency}}</strong></span> <br>
+    <span *ngIf="servicio?.description"> el servicio incluye:  <strong>{{servicio?.description | uppercase}}</strong> </span>
+</ng-container>
+
+
+<ng-container *ngIf="loading">
+    <span><i style="color: blue;">Cargando informacion...</i></span>
+</ng-container>
+
