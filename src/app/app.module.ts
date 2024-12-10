@@ -7,6 +7,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ServicioComponent } from './servicio/servicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ServiceDetailComponent } from './service-detail/service-detail.component';
+import { ComprasComponent } from './compras/compras.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ServiceDetailComponent } from './service-detail/service-detail.componen
     InicioComponent,
     ServicioComponent,
     ContactoComponent,
-    ServiceDetailComponent
+    ServiceDetailComponent,
+    ComprasComponent
   ],
   imports: [
     BrowserModule,
