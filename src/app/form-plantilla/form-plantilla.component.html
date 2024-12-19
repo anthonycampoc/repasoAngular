@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="text-center">PLANTILLAS</h2>
+    <form #miForm="ngForm" (ngSubmit)="enviar()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" 
+          [(ngModel)]="usuario.nombre" required
+          [ngModelOptions]="{standalone: true}">
+
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido"
+             [(ngModel)]="usuario.apellido" required
+             [ngModelOptions]="{standalone: true}"  >
+         
+          </div>
+  
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
