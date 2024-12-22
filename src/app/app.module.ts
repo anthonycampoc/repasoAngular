@@ -7,13 +7,15 @@ import { FormPlantillaComponent } from './form-plantilla/form-plantilla.componen
 import { FormReactivoComponent } from './form-reactivo/form-reactivo.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormularioHijoComponent } from './form-reactivo/formulario-hijo/formulario-hijo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormPlantillaComponent,
     FormReactivoComponent,
-    InicioComponent
+    InicioComponent,
+    FormularioHijoComponent
   ],
   imports: [
     BrowserModule,

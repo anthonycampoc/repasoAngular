@@ -11,19 +11,20 @@ export class FormReactivoComponent implements OnInit{
   
   
   formularioContacto:  FormGroup;
-  tipoId: string = 'cedula';
-  usuarioActivo: any ={
+  tipoId: string = '';
+  mostrarCedula: boolean = false;
+  /*usuarioActivo: any ={
     nombre: 'Anthony',
     apellido: 'Cotera',
     cedula: '0850268749'
-  }
-  
+  }*/
+
   constructor (private form: FormBuilder){
     this.formularioContacto = this.form.group({
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
       tipoId:[''],
-      cedula:['', [Validators.required, Validators.minLength(10)]],
+      //cedula:['', [Validators.required, Validators.minLength(10)]],
      //cedula:[''],//asi quedaria si queremos hacer las validaciones cuado se cargue la aplicacion por primeza vez
       correo: ['',[ Validators.required, Validators.email]]
     })
@@ -31,6 +32,7 @@ export class FormReactivoComponent implements OnInit{
 
   ngOnInit(): void {
     this.formularioContacto.get('tipoId')?.valueChanges.subscribe(value =>{
+      this.mostrarCedula = value != '';
       this.tipoId = value;
     })
 

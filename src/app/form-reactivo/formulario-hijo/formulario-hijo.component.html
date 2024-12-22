@@ -1,0 +1,6 @@
+<form [formGroup]="formularioDocumento">
+    <label for="exampleInputEmail1" class="form-label">{{cambioTipoId}}</label>
+    <input [ngClass]="{'is-invalid': hasErrors('cedula', 'required') ||  hasErrors('cedula', 'minlength')}" formControlName="cedula" type="text" class="form-control" id="cedula">
+    <div  class="text-danger" *ngIf="hasErrors('cedula', 'required')"> {{cambioTipoId}} Requerida</div>
+    <div  class="text-danger" *ngIf="hasErrors('cedula', 'minlength')"> {{cambioTipoId}} de 10 numeros</div>
+</form>
