@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { ServicioComponent } from './servicio/servicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ServiceDetailComponent } from './service-detail/service-detail.component';
 import { ComprasComponent } from './compras/compras.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { ComprasComponent } from './compras/compras.component';
     ServicioComponent,
     ContactoComponent,
     ServiceDetailComponent,
-    ComprasComponent
+    ComprasComponent,
+    ProductsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,//para hacer peticiones HTTP@
   ],
   providers: [],
   bootstrap: [AppComponent]

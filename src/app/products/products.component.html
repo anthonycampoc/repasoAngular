@@ -1,0 +1,29 @@
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productList">
+            <th scope="row">{{producto.id}}</th>
+            <td>{{producto.title |uppercase}}</td>
+            <td [ngClass]="{'red-color': producto.price < 60}">{{producto.price | currency}}</td>
+            <td><textarea name="" id="" cols="30">{{producto.description}}</textarea></td>
+            <td>{{producto.category}}</td>
+            <td><img class="prod-img" src="{{producto.image}}" alt="imagen producto"></td>
+            <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/product', producto.id]" >View Details</button></td>
+          </tr>
+    
+       
+        </tbody>
+    </table>
+</div>
+
