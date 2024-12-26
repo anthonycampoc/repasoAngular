@@ -9,6 +9,7 @@ import { ApiRestService } from '../api/api-rest.service';
 })
 export class ProductsComponent implements OnInit {
     productList: Iproducts[] = [];
+    loading: boolean = true;
 
     constructor(private _apiServive: ApiRestService){}
 
@@ -16,6 +17,7 @@ export class ProductsComponent implements OnInit {
       this._apiServive.getAllProducts().subscribe((data: Iproducts[])=>{
         console.log(data);
         this.productList = data;
+        this.loading = false
       })
     }
 }
